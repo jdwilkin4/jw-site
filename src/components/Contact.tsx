@@ -7,6 +7,7 @@ export default function Contact() {
           <a
             href="https://twitter.com/codergirl1991"
             target="_blank"
+            rel="noreferrer noopener"
             className="bg-blue-500 hover:bg-blue-600 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
           >
             <svg
@@ -20,6 +21,7 @@ export default function Contact() {
             <span>Twitter</span>
           </a>
           <a
+            rel="noreferrer noopener"
             href="https://github.com/jdwilkin4"
             target="_blank"
             className="bg-gray-600 hover:bg-gray-700 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
@@ -39,6 +41,7 @@ export default function Contact() {
             <span>GitHub</span>
           </a>
           <a
+            rel="noreferrer noopener"
             href="https://www.linkedin.com/in/jessica-wilkins-developer"
             target="_blank"
             className="bg-blue-600 hover:bg-blue-700 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
