@@ -3,7 +3,7 @@ import profilePic from "../images/jw-profile.jpeg";
 export default function About() {
   return (
     <div className="flex justify-evenly items-center mt-10">
-      <div className=" md:w-2/4 p-16 sm:my-auto bg-gray-800 rounded-3xl space-y-10">
+      <div className="md:w-2/4 p-16 sm:my-auto bg-gray-800 rounded-3xl space-y-10">
         <h1 className="text-5xl font-semibold text-gray-100">About Me</h1>
         <p>
           Jessica Wilkins is a classical musician turned Software Engineer.
