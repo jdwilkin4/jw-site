@@ -1,4 +1,4 @@
-import { Home, About, Articles, Contact, Media, Navbar } from "./exports";
+import { Home, About, Articles, Contact, Media, Navbar } from "../exports";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
