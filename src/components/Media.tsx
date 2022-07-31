@@ -17,7 +17,7 @@ export default function Media() {
   }
 
   return (
-    <div>
+    <div id="media">
       <h1 className="text-5xl font-semibold text-gray-100 text-center my-4">
         Media
       </h1>

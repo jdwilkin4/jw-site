@@ -1,6 +1,9 @@
 export default function Contact() {
   return (
-    <div className="flex flex-col mt-20 bg-center bg-cover bg-no-repeat">
+    <div
+      id="contact"
+      className="flex flex-col mt-20 bg-center bg-cover bg-no-repeat"
+    >
       <div className="grid place-items-center mx-auto p-16 sm:my-auto bg-gray-800 rounded-3xl space-y-10">
         <h1 className="text-5xl font-semibold text-gray-100">Let's connect</h1>
         <div className="flex flex-col md:flex-row items-center justify-center  md:space-x-3 space-y-5 md:space-y-0">

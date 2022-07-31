@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 import MobileMenuIcon from "./MobileMenuIcon";
 
 export default function Navbar() {
@@ -54,20 +53,13 @@ interface Props {
   block?: string;
 }
 
-const NavLinks: React.FC<Props> = ({ options, block }: Props) => {
+const NavLinks: React.FC<Props> = ({ options }: Props) => {
   return (
     <>
       {options.map((subPage) => (
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? `bg-gray-900 text-white px-3  py-2 rounded-md text-sm font-medium ${block}`
-              : `text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${block}`
-          }
-          to={`/${subPage === "Home" ? "" : subPage.toLowerCase()}`}
-        >
+        <a href={subPage === "Home" ? "" : "#" + subPage.toLowerCase()}>
           {subPage}
-        </NavLink>
+        </a>
       ))}
     </>
   );

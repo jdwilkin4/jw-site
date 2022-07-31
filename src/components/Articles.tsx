@@ -17,7 +17,7 @@ export default function Articles() {
   }
 
   return (
-    <>
+    <div id="articles">
       <header>
         <h1 className="text-5xl font-semibold text-gray-100 text-center my-4">
           Top Articles
@@ -93,6 +93,6 @@ export default function Articles() {
           )
         )}
       </main>
-    </>
+    </div>
   );
 }
