@@ -24,7 +24,7 @@ export default function Media() {
 
       <div className="flex flex-wrap justify-evenly mt-6">
         {mediaData.map(({ id, podcast, title, link }) => (
-          <div
+          <article
             key={id}
             className="mx-6 my-8 rounded-3xl bg-gray-800 p-4 text-center md:w-1/4"
           >
@@ -40,7 +40,7 @@ export default function Media() {
                 Take a listen
               </a>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </div>
