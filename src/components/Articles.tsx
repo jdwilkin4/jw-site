@@ -17,51 +17,50 @@ export default function Articles() {
   }
 
   return (
-    <div id="articles">
-      <header>
-        <h1 className="text-5xl font-semibold text-gray-100 text-center my-4">
-          Top Articles
-        </h1>
-        <p className="text-2xl rounded text-center my-6 bg-gray-800 md:w-1/2 mx-auto p-6">
-          I have written for{" "}
-          <a
-            className="underline hover:text-blue-600"
-            href="https://www.freecodecamp.org/news/author/jessica-wilkins/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            freeCodeCamp News
-          </a>
-          ,{" "}
-          <a
-            className="underline hover:text-blue-600"
-            href="https://www.thisdot.co/author/-jessica-wilkins"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            This Dot Labs
-          </a>
-          , and the{" "}
-          <a
-            className="underline hover:text-blue-600"
-            href="https://www.gatsbyjs.com/contributors/jessica-wilkins"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Gatsby Blog
-          </a>
-        </p>
-      </header>
-      <main className="flex flex-wrap justify-evenly mt-6">
+    <section id="articles" className="mt-20">
+      <h2 className="text-5xl font-semibold text-gray-100 text-center my-4">
+        Top Articles
+      </h2>
+      <p className="text-2xl rounded text-center my-6 bg-gray-800 md:w-1/2 mx-auto p-6">
+        I have written for{" "}
+        <a
+          className="underline hover:text-blue-600"
+          href="https://www.freecodecamp.org/news/author/jessica-wilkins/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          freeCodeCamp News
+        </a>
+        ,{" "}
+        <a
+          className="underline hover:text-blue-600"
+          href="https://www.thisdot.co/author/-jessica-wilkins"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          This Dot Labs
+        </a>
+        , and the{" "}
+        <a
+          className="underline hover:text-blue-600"
+          href="https://www.gatsbyjs.com/contributors/jessica-wilkins"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Gatsby Blog
+        </a>
+      </p>
+
+      <div className="flex flex-wrap justify-evenly mt-6">
         {postData.map(
           ({ id, published, description, title, link, publisher }) => (
             <article
               key={id}
               className="p-6 my-10 max-w-lg bg-gray-800 rounded-lg"
             >
-              <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-100">
+              <h3 className="mb-2 text-2xl font-bold tracking-tight text-gray-100">
                 {title}
-              </h2>
+              </h3>
               <p>
                 Published {published} by {publisher}
               </p>
@@ -92,7 +91,7 @@ export default function Articles() {
             </article>
           )
         )}
-      </main>
-    </div>
+      </div>
+    </section>
   );
 }

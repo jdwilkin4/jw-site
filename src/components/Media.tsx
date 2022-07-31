@@ -18,18 +18,18 @@ export default function Media() {
 
   return (
     <div id="media">
-      <h1 className="text-5xl font-semibold text-gray-100 text-center my-4">
+      <h2 className="text-5xl font-semibold text-gray-100 text-center my-4">
         Media
-      </h1>
+      </h2>
 
-      <div className="flex flex-wrap justify-evenly mt-6">
+      <section className="flex flex-wrap justify-evenly mt-6">
         {mediaData.map(({ id, podcast, title, link }) => (
           <article
             key={id}
             className="mx-6 my-8 rounded-3xl bg-gray-800 p-4 text-center md:w-1/4"
           >
-            <h2 className="text-2xl font-bold">{podcast}</h2>
-            <h3 className="mt-6">{title}</h3>
+            <h3 className="text-2xl font-bold">{podcast}</h3>
+            <h4 className="mt-6">{title}</h4>
             <div className="mt-10 mb-4">
               <a
                 target="_blank"
@@ -42,7 +42,7 @@ export default function Media() {
             </div>
           </article>
         ))}
-      </div>
+      </section>
     </div>
   );
 }
