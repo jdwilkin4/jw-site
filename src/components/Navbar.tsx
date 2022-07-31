@@ -4,6 +4,7 @@ import MobileMenuIcon from "./MobileMenuIcon";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  console.log(window);
   const menuOptions: string[] = [
     "Home",
     "About",
