@@ -1,6 +1,7 @@
 export default function Contact() {
+  const currentYear: number = new Date().getFullYear();
   return (
-    <div
+    <footer
       id="contact"
       className="flex flex-col mt-20 bg-center bg-cover bg-no-repeat"
     >
@@ -53,6 +54,7 @@ export default function Contact() {
           </a>
         </div>
       </div>
-    </div>
+      <p className="text-lg mt-6 text-center">Copyright &copy; {currentYear}</p>
+    </footer>
   );
 }

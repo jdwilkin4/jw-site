@@ -14,9 +14,7 @@ function App() {
         <Media />
       </main>
 
-      <footer>
-        <Contact />
-      </footer>
+      <Contact />
     </>
   );
 }
