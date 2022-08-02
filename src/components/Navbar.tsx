@@ -8,6 +8,7 @@ export default function Navbar() {
   const menuOptions: string[] = [
     "Home",
     "About",
+    "Projects",
     "Articles",
     "Media",
     "Contact",

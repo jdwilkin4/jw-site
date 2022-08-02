@@ -1,4 +1,12 @@
-import { Hero, About, Articles, Contact, Media, Navbar } from "../exports";
+import {
+  Hero,
+  About,
+  Articles,
+  Contact,
+  Media,
+  Navbar,
+  Projects,
+} from "../exports";
 
 function App() {
   return (
@@ -10,6 +18,7 @@ function App() {
 
       <main>
         <About />
+        <Projects />
         <Articles />
         <Media />
       </main>
