@@ -1,4 +1,4 @@
-import blackExcellenceImg from "../images/BEMP-homepage.png";
+import blackExcellenceImg from "../images/BEMP-homepage.webp";
 export default function Projects() {
   return (
     <>
