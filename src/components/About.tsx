@@ -9,7 +9,7 @@ export default function About() {
           I am a classical musician turned Software Engineer. Prior to joining
           the tech industry, I spent my time running my own sheet music company{" "}
           <a
-            className="underline decoration-blue-700 text-blue-600 hover:decoration-blue-900"
+            className="underline hover:text-blue-600"
             href="https://www.jdwsheetmusic.com/"
             target="_blank"
             rel="noopener noreferrer"
@@ -19,7 +19,7 @@ export default function About() {
           as well as performing and teaching in Los Angeles, CA. I enjoy working
           with React and TypeScript. I am also a prolific technical writer for{" "}
           <a
-            className="underline decoration-blue-700 text-blue-600 hover:decoration-blue-900"
+            className="underline hover:text-blue-600"
             href="https://www.freecodecamp.org/news/author/jessica-wilkins/"
             target="_blank"
             rel="noopener noreferrer"
