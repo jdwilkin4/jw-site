@@ -1,29 +1,34 @@
 import { useEffect, useState } from "react";
+import { Loader, ErrorMessage } from "../exports";
+import { FetchStatus } from "../types/types";
 
 export default function Media() {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [status, setStatus] = useState<FetchStatus>("loading");
   const [mediaData, setMediaData] = useState([]);
 
   useEffect(() => {
     fetch("https://jw-site-backend.herokuapp.com/api/media")
       .then((res) => res.json())
-      .then((data) => setMediaData(data));
-
-    setIsLoading(false);
+      .then(
+        (data) => {
+          setMediaData(data);
+          setStatus("success");
+        },
+        (error) => {
+          setStatus("error");
+          console.error(`There was an error fetching data: ${error}`);
+        }
+      );
   }, []);
 
-  if (isLoading) {
-    return <h2>Loading...</h2>;
-  }
-
-  return (
-    <div id="media">
-      <h2 className="text-5xl font-semibold text-gray-100 text-center my-4">
-        Media
-      </h2>
-
-      <section className="flex flex-wrap justify-evenly mt-6">
-        {mediaData.map(({ id, podcast, title, link }) => (
+  const showMedia = () => {
+    switch (status) {
+      case "error":
+        return <ErrorMessage />;
+      case "loading":
+        return <Loader />;
+      default:
+        return mediaData.map(({ id, podcast, title, link }) => (
           <article
             key={id}
             className="mx-6 my-8 rounded-3xl bg-gray-800 p-4 text-center md:w-1/4"
@@ -41,7 +46,18 @@ export default function Media() {
               </a>
             </div>
           </article>
-        ))}
+        ));
+    }
+  };
+
+  return (
+    <div id="media">
+      <h2 className="text-5xl font-semibold text-gray-100 text-center my-4">
+        Media
+      </h2>
+
+      <section className="flex flex-wrap justify-evenly mt-6">
+        {showMedia()}
       </section>
     </div>
   );
