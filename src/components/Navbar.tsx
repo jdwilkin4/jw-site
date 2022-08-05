@@ -4,7 +4,6 @@ import MobileMenuIcon from "./MobileMenuIcon";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  console.log(window);
   const menuOptions: string[] = [
     "Home",
     "About",
@@ -50,6 +49,7 @@ export default function Navbar() {
     </nav>
   );
 }
+
 interface Props {
   options: string[];
   block?: string;
@@ -58,8 +58,11 @@ interface Props {
 const NavLinks: React.FC<Props> = ({ options }: Props) => {
   return (
     <>
-      {options.map((subPage) => (
-        <a href={subPage === "Home" ? "" : "#" + subPage.toLowerCase()}>
+      {options.map((subPage, id) => (
+        <a
+          key={`${id}${subPage}`}
+          href={subPage === "Home" ? "" : "#" + subPage.toLowerCase()}
+        >
           {subPage}
         </a>
       ))}
