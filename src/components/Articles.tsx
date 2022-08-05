@@ -1,58 +1,34 @@
 import { useEffect, useState } from "react";
+import { Loader, ErrorMessage } from "../exports";
+import { FetchStatus } from "../types/types";
 
 export default function Articles() {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [postData, setPostData] = useState([]);
+  const [status, setStatus] = useState<FetchStatus>("loading");
 
   useEffect(() => {
     fetch("https://jw-site-backend.herokuapp.com/api/posts")
       .then((res) => res.json())
-      .then((data) => setPostData(data));
-
-    setIsLoading(false);
+      .then(
+        (data) => {
+          setPostData(data);
+          setStatus("success");
+        },
+        (error) => {
+          setStatus("error");
+          console.error(`There was an error fetching data: ${error}`);
+        }
+      );
   }, []);
 
-  if (isLoading) {
-    return <h2>Loading...</h2>;
-  }
-
-  return (
-    <section id="articles" className="mt-20">
-      <h2 className="text-5xl font-semibold text-gray-100 text-center my-4">
-        Top Articles
-      </h2>
-      <p className="text-2xl rounded text-center my-6 bg-gray-800 md:w-1/2 mx-auto p-6">
-        I have written for{" "}
-        <a
-          className="underline hover:text-blue-600"
-          href="https://www.freecodecamp.org/news/author/jessica-wilkins/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          freeCodeCamp News
-        </a>
-        ,{" "}
-        <a
-          className="underline hover:text-blue-600"
-          href="https://www.thisdot.co/author/-jessica-wilkins"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          This Dot Labs
-        </a>
-        , and the{" "}
-        <a
-          className="underline hover:text-blue-600"
-          href="https://www.gatsbyjs.com/contributors/jessica-wilkins"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Gatsby Blog
-        </a>
-      </p>
-
-      <div className="flex flex-wrap justify-evenly mt-6">
-        {postData.map(
+  const showArticles = () => {
+    switch (status) {
+      case "error":
+        return <ErrorMessage />;
+      case "loading":
+        return <Loader />;
+      default:
+        return postData.map(
           ({ id, published, description, title, link, publisher }) => (
             <article
               key={id}
@@ -90,8 +66,46 @@ export default function Articles() {
               </div>
             </article>
           )
-        )}
-      </div>
+        );
+    }
+  };
+
+  return (
+    <section id="articles" className="mt-20">
+      <h2 className="text-5xl font-semibold text-gray-100 text-center my-4">
+        Top Articles
+      </h2>
+      <p className="text-2xl rounded text-center my-6 bg-gray-800 md:w-1/2 mx-auto p-6">
+        I have written for{" "}
+        <a
+          className="underline hover:text-blue-600"
+          href="https://www.freecodecamp.org/news/author/jessica-wilkins/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          freeCodeCamp News
+        </a>
+        ,{" "}
+        <a
+          className="underline hover:text-blue-600"
+          href="https://www.thisdot.co/author/-jessica-wilkins"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          This Dot Labs
+        </a>
+        , and the{" "}
+        <a
+          className="underline hover:text-blue-600"
+          href="https://www.gatsbyjs.com/contributors/jessica-wilkins"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Gatsby Blog
+        </a>
+      </p>
+
+      <div className="flex flex-wrap justify-evenly mt-6">{showArticles()}</div>
     </section>
   );
 }
