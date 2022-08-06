@@ -15,7 +15,11 @@
   --light-grey: #dadde3;
 }
 
-body {
+body,
+.active {
   background-color: var(--dark-grey);
+}
+
+body {
   color: var(--light-grey);
 }

@@ -3,7 +3,6 @@ import MobileMenuIcon from "./MobileMenuIcon";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-
   const menuOptions: string[] = [
     "Home",
     "About",
@@ -14,7 +13,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-gray-800">
+    <nav className="bg-gray-800 sticky top-0 z-10 p-2">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -41,8 +40,8 @@ export default function Navbar() {
 
       <div className="sm:hidden" id="mobile-menu">
         {isOpen && (
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            <NavLinks options={menuOptions} block="block" />
+          <div className="flex flex-wrap">
+            <NavLinks options={menuOptions} />
           </div>
         )}
       </div>
@@ -52,14 +51,17 @@ export default function Navbar() {
 
 interface Props {
   options: string[];
-  block?: string;
 }
 
 const NavLinks: React.FC<Props> = ({ options }: Props) => {
+  const [activeLink, setActiveLink] = useState<string>("");
+
   return (
     <>
       {options.map((subPage, id) => (
         <a
+          onClick={() => setActiveLink(subPage)}
+          className={`p-4 rounded ${activeLink === subPage ? "active" : ""}`}
           key={`${id}${subPage}`}
           href={subPage === "Home" ? "" : "#" + subPage.toLowerCase()}
         >
