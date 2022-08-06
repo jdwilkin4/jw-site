@@ -11,11 +11,8 @@ import {
 function App() {
   return (
     <>
-      <header>
-        <Navbar />
-        <Hero />
-      </header>
-
+      <Navbar />
+      <Hero />
       <main>
         <About />
         <Projects />
