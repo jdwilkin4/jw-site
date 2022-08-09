@@ -1,4 +1,4 @@
-import profilePic from "../images/jw-profile.webp";
+import profilePic from "../../images/jw-profile.webp";
 
 export default function About() {
   return (
