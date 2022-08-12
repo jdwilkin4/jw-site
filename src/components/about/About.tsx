@@ -1,6 +1,7 @@
+import React from "react";
 import profilePic from "../../images/jw-profile.webp";
 
-export default function About() {
+export const About: React.VFC = () => {
   return (
     <section id="about" className="flex justify-evenly items-center mt-10">
       <div className="md:w-2/4 p-16 sm:my-auto bg-gray-800 rounded-3xl space-y-10">
@@ -36,4 +37,4 @@ export default function About() {
       />
     </section>
   );
-}
+};
