@@ -4,14 +4,14 @@ import {
   Articles,
   Contact,
   Media,
-  Navbar,
+  Header,
   Projects,
 } from "../exports";
 
 function App() {
   return (
     <>
-      <Navbar />
+      <Header />
       <Hero />
       <main>
         <About />
