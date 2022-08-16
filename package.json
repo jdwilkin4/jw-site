@@ -73,6 +73,7 @@
     "lint-staged": ">=10",
     "prettier": "2.7.1",
     "prop-types": "^15.8.1",
+    "storybook-addon-mock": "^2.4.1",
     "webpack": "^5.74.0"
   },
   "lint-staged": {
