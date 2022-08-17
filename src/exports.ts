@@ -6,4 +6,4 @@ export { Articles } from "./components/articles/Articles";
 export { Loader } from "./components/loader/Loader";
 export { default as Media } from "./components/Media";
 export { default as Projects } from "./components/Projects";
-export { default as ErrorMessage } from "./components/ErrorMessage";
+export { ErrorMessage } from "./components/error-message/ErrorMessage";

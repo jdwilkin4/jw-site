@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Loader } from "./Loader";
 
 export default {
-  title: "Loader section",
+  title: "Loader Component",
   component: Loader,
   parameters: {
     layout: "fullscreen",
@@ -11,4 +11,4 @@ export default {
 
 const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
 
-export const LoaderSection = Template.bind({});
+export const LoaderComponent = Template.bind({});
