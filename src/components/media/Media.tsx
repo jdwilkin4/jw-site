@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Loader, ErrorMessage } from "../exports";
-import { FetchStatus } from "../types/types";
+import { Loader, ErrorMessage } from "../../exports";
+import { FetchStatus } from "../../types/types";
 
-export default function Media() {
+export const Media: React.VFC = () => {
   const [status, setStatus] = useState<FetchStatus>("loading");
   const [mediaData, setMediaData] = useState([]);
 
@@ -61,4 +61,4 @@ export default function Media() {
       </section>
     </div>
   );
-}
+};
