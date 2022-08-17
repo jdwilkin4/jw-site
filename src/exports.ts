@@ -5,5 +5,5 @@ export { Contact } from "./components/contact/Contact";
 export { Articles } from "./components/articles/Articles";
 export { Loader } from "./components/loader/Loader";
 export { Media } from "./components/media/Media";
-export { default as Projects } from "./components/Projects";
+export { Projects } from "./components/projects/Projects";
 export { ErrorMessage } from "./components/error-message/ErrorMessage";
