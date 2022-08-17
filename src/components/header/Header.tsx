@@ -1,7 +1,7 @@
 import { useState } from "react";
-import MobileMenuIcon from "./MobileMenuIcon";
+import { MobileMenuIcon } from "../mobile-menu-icon/MobileMenuIcon";
 
-export default function Navbar() {
+export const Header: React.VFC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const menuOptions: string[] = [
     "Home",
@@ -47,7 +47,7 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
 
 interface Props {
   options: string[];

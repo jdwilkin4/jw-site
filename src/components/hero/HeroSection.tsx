@@ -1,4 +1,4 @@
-export default function Hero() {
+export const Hero: React.VFC = () => {
   return (
     <header id="home" className="text-center mt-16 mb-28">
       <h1 className="text-6xl my-6">Jessica Wilkins</h1>
@@ -10,4 +10,4 @@ export default function Hero() {
       </ul>
     </header>
   );
-}
+};

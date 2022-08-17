@@ -1,4 +1,4 @@
-export default function Contact() {
+export const Contact: React.VFC = () => {
   const currentYear: number = new Date().getFullYear();
   return (
     <footer
@@ -57,4 +57,4 @@ export default function Contact() {
       <p className="text-lg mt-6 text-center">Copyright &copy; {currentYear}</p>
     </footer>
   );
-}
+};

@@ -1,4 +1,4 @@
-export default function MobileMenuIcon() {
+export const MobileMenuIcon: React.VFC = () => {
   return (
     <>
       <svg
@@ -34,4 +34,4 @@ export default function MobileMenuIcon() {
       </svg>
     </>
   );
-}
+};

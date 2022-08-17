@@ -1,9 +1,9 @@
-export { default as Hero } from "./components/HeroSection";
-export { default as About } from "./components/About";
-export { default as Projects } from "./components/Projects";
-export { default as Articles } from "./components/Articles";
-export { default as Contact } from "./components/Contact";
-export { default as Media } from "./components/Media";
-export { default as Navbar } from "./components/Navbar";
-export { default as Loader } from "./components/Loader";
-export { default as ErrorMessage } from "./components/ErrorMessage";
+export { Hero } from "./components/hero/HeroSection";
+export { Header } from "./components/header/Header";
+export { About } from "./components/about/About";
+export { Contact } from "./components/contact/Contact";
+export { Articles } from "./components/articles/Articles";
+export { Loader } from "./components/loader/Loader";
+export { Media } from "./components/media/Media";
+export { Projects } from "./components/projects/Projects";
+export { ErrorMessage } from "./components/error-message/ErrorMessage";

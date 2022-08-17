@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Loader, ErrorMessage } from "../exports";
-import { FetchStatus } from "../types/types";
+import { Loader, ErrorMessage } from "../../exports";
+import { FetchStatus } from "../../types/types";
 
-export default function Articles() {
+export const Articles: React.VFC = () => {
   const [postData, setPostData] = useState([]);
   const [status, setStatus] = useState<FetchStatus>("loading");
 
@@ -108,4 +108,4 @@ export default function Articles() {
       <div className="flex flex-wrap justify-evenly mt-6">{showArticles()}</div>
     </section>
   );
-}
+};

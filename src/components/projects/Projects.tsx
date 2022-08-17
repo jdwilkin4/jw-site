@@ -1,5 +1,5 @@
-import blackExcellenceImg from "../images/BEMP-homepage.webp";
-export default function Projects() {
+import blackExcellenceImg from "../../images/BEMP-homepage.webp";
+export const Projects: React.VFC = () => {
   return (
     <>
       <section id="projects" className="my-20">
@@ -26,4 +26,4 @@ export default function Projects() {
       </section>
     </>
   );
-}
+};
