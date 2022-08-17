@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MobileMenuIcon from "../MobileMenuIcon";
+import { MobileMenuIcon } from "../mobile-menu-icon/MobileMenuIcon";
 
 export const Header: React.VFC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
