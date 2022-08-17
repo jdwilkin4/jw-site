@@ -1,4 +1,4 @@
-export default function Loader() {
+export const Loader: React.VFC = () => {
   return (
     <div className="flex my-10 w-screen items-center justify-center">
       <button
@@ -30,4 +30,4 @@ export default function Loader() {
       </button>
     </div>
   );
-}
+};
