@@ -1,5 +1,5 @@
+export const currentYear: number = new Date().getFullYear();
 export const Contact: React.VFC = () => {
-  const currentYear: number = new Date().getFullYear();
   return (
     <footer
       id="contact"
