@@ -9,6 +9,7 @@ test("contact heading should be in the document", () => {
 describe("should navigate to social media links", () => {
   test("navigates to codergirl1991 twitter page", () => {
     render(<Contact />);
+
     expect(screen.getByText("Twitter").closest("a")).toHaveAttribute(
       "target",
       "_blank"
@@ -21,6 +22,7 @@ describe("should navigate to social media links", () => {
 
   test("navigates to jdwilkin4 GitHub page", () => {
     render(<Contact />);
+
     expect(screen.getByText("GitHub").closest("a")).toHaveAttribute(
       "href",
       "https://github.com/jdwilkin4"
@@ -33,6 +35,7 @@ describe("should navigate to social media links", () => {
 
   test("navigates to Jessica Wilkins linkedin page", () => {
     render(<Contact />);
+
     expect(screen.getByText("LinkedIn").closest("a")).toHaveAttribute(
       "href",
       "https://www.linkedin.com/in/jessica-wilkins-developer"
