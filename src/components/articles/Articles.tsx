@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { Loader, ErrorMessage } from "../../exports";
 import { FetchStatus } from "../../types/types";
-
+import { ARTICLES_API } from "../../constants";
 export const Articles: React.VFC = () => {
   const [postData, setPostData] = useState([]);
   const [status, setStatus] = useState<FetchStatus>("loading");
 
   useEffect(() => {
-    fetch("https://jw-site-backend.herokuapp.com/api/posts")
+    fetch(ARTICLES_API)
       .then((res) => res.json())
       .then(
         (data) => {
