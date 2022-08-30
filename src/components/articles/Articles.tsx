@@ -46,7 +46,7 @@ export const Articles: React.VFC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   href={link}
-                  className="inline-flex items-center py-2 px-3 justify-center w-full font-medium text-white bg-violet-500 hover:bg-violet-600 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
+                  className="inline-flex items-center py-2 px-3 justify-center w-full font-medium text-white bg-violet-700 hover:bg-violet-800 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
                 >
                   Read this article on {publisher}
                   <svg
