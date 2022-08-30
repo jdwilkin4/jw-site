@@ -3,7 +3,7 @@ import profilePic from "../../images/jw-profile.webp";
 
 export const About: React.VFC = () => {
   return (
-    <section id="about" className="flex justify-evenly items-center mt-10">
+    <section id="about" className="flex justify-evenly items-center mb-32">
       <div className="md:w-2/4 p-16 sm:my-auto bg-gray-800 rounded-3xl space-y-10">
         <h2 className="text-5xl font-semibold text-gray-100">About Me</h2>
         <p className="text-xl leading-10">

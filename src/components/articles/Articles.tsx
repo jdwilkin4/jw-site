@@ -71,7 +71,7 @@ export const Articles: React.VFC = () => {
   };
 
   return (
-    <section id="articles" className="mt-20">
+    <section id="articles" className="mb-32">
       <h2 className="text-5xl font-semibold text-gray-100 text-center my-4">
         Top Articles
       </h2>
