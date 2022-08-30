@@ -52,7 +52,7 @@ export const Media: React.VFC = () => {
   };
 
   return (
-    <div id="media mb-32">
+    <div id="media" className="mb-32">
       <h2 className="text-5xl font-semibold text-gray-100 text-center my-4">
         Media
       </h2>
