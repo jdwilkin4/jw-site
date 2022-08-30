@@ -41,7 +41,7 @@ export const Media: React.VFC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href={link}
-                className="rounded-full bg-violet-500 hover:bg-violet-600 px-5 py-3 text-white"
+                className="rounded-full bg-violet-700 hover:bg-violet-800 px-5 py-3 text-white"
               >
                 Take a listen
               </a>
