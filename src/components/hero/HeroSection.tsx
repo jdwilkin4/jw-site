@@ -1,6 +1,6 @@
 export const Hero: React.VFC = () => {
   return (
-    <header id="home" className="text-center mt-16 mb-28">
+    <header id="home" className="text-center my-40">
       <h1 className="text-6xl my-6">Jessica Wilkins</h1>
       <h2 className="text-5xl">Software Engineer | Technical Writer</h2>
       <ul className="list-none text-3xl mt-20">
